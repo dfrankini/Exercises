@@ -2,7 +2,7 @@
 int Passkey() {
         
         char username[100];
-        printf("Enter username : ");
+        printf("Enter passkey: ");
         scanf("%s",username);
         
         int length = 0;
@@ -10,16 +10,14 @@ int Passkey() {
         length--;
         
         int shift;
-        printf("Enter shift : ");
+        printf("Enter shift amount: ");
         scanf("%d", &shift);
         
         char password[length+1];
-        
-        for(int i=0 ; i<length ; i++) {
-                password[i] = username[i]+shift;
+        for(int x=0 ; x<length ; x++) {
+                password[x] = username[x]+shift;
         }
         password[length] = '\0';
-        
         printf("User Password : %s",password);
         
         FILE *fp;
